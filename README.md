@@ -6,7 +6,7 @@ This is a mock shopping cart app built using Vite and React.
 - [Live Version](https://ewoknock.github.io/shopping-cart)
 
 ## Features
-T - Shop page features products where users can adjust the quantity and add to cart
+ - Shop page features products where users can adjust the quantity and add to cart
  - The cart button in the header updates the quantity as users add items to cart
  - Clicking the cart button displays the cart with product quanities, pricing, and subtotal. Users can update quantity or remove an item, and click to checkout.
 
