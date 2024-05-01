@@ -3,6 +3,8 @@ import {
     RouterProvider,
 } from 'react-router-dom'
 import App from './App.jsx'
+import Home from './components/Home.jsx'
+import Shop from './components/Shop.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 
 const Router = () => {
@@ -11,6 +13,16 @@ const Router = () => {
             path: "/",
             element: <App />,
             errorElement: <ErrorPage />,
+            children: [
+                {
+                    index: true,
+                    element: <Home />
+                },
+                {
+                    path: "shop",
+                    element: <Shop />
+                }
+            ]
         }
     ])
     return <RouterProvider router={router} />
