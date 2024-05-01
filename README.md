@@ -1,8 +1,19 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a mock shopping cart app built using Vite and React.
 
-Currently, two official plugins are available:
+- [Link to the Assignment](https://www.theodinproject.com/lessons/react-new-shopping-cart)
+- [Live Version](https://ewoknock.github.io/shopping-cart)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+T - Shop page features products where users can adjust the quantity and add to cart
+ - The cart button in the header updates the quantity as users add items to cart
+ - Clicking the cart button displays the cart with product quanities, pricing, and subtotal. Users can update quantity or remove an item, and click to checkout.
+
+## Frameworks and Tools Used
+ - Javascript/HTML/SCSS
+ - React
+ - Vite
+ - ESLint
+ - Vitest and React Testing Library for testing
+
