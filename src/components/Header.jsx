@@ -4,13 +4,14 @@ function Header(){
     return (
         <header className="header">
             <div className="header__logo">
-                logo
+                <Link to="/">Logo</Link>
             </div>
             <nav className="header__nav">
-                nav
+                <Link to="/">Home</Link>
+                <Link to="/shop">Shop</Link>
             </nav>
             <div className="header__cart">
-                cart
+                <Link to="/cart">Cart</Link>
             </div>
         </header>
     )

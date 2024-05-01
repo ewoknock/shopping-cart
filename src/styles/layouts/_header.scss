@@ -1,8 +1,22 @@
-header{
+.header{
     max-width: 1200px;
     display: flex; 
     justify-content: space-between;
     padding: var(--space-m) var(--space-xxl);
     margin: 0 auto;
     background-color: var(--color-text-header);
+
+    &__nav{
+        display: flex;
+        gap: var(--space-xxl);
+        a{
+            &:hover{
+                border-bottom: 3px solid var(--color-black);
+            }
+        }
+    }
+
+    a{
+        color: var(--color-black);
+    }
 }

@@ -2,7 +2,7 @@
 function Shop(){
     return (
         <section className="product-container">
-            Placeholder
+            Product Page
         </section>
     )
 }
