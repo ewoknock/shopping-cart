@@ -16,14 +16,14 @@ function Set({ set }){
             <div className="set__image">
                 <img src={set.image} alt={set.name} />
             </div>
-            <p>{set.name}</p>
-            <p>${set.price}</p>
+            <p aria-label="set-name">{set.name}</p>
+            <p aria-label="price">${set.price}</p>
             <div className="set__actions">
                 <div className="set__qty">
                     <button 
                         className="btn btn__quantity"
                         onClick={() => updateQuantity(quantity - 1)}>-</button>
-                        <span>{quantity}</span>
+                        <span data-testid="qty-input">{quantity}</span>
                     <button 
                     className="btn btn__quantity"
                     onClick={() => updateQuantity(quantity + 1)}>+</button>
