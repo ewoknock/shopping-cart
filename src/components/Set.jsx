@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PropTypes from 'prop-types';
 
 function Set({ set }){
     const [quantity, setQuantity] = useState(1)
@@ -33,5 +34,10 @@ function Set({ set }){
         </div>
     )
 }
+
+
+Set.propTypes = {
+    set: PropTypes.Object,
+};
 
 export default Set
