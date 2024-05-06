@@ -1,0 +1,23 @@
+.set{
+    flex: 0 0 15rem;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: var(--space-s);
+
+    &__image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 225px;
+    }
+
+    img{
+        width: 215px;
+    }
+
+    p{
+        font-weight: 700;
+    }
+}

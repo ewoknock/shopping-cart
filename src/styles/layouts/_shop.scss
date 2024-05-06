@@ -1,0 +1,8 @@
+.shop{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-m);
+    max-width: 1200px;
+}
