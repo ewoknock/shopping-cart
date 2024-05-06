@@ -12,7 +12,7 @@ function Set({ set }){
     }
 
     return (
-        <div className="set">
+        <div className="set" data-testid="set">
             <div className="set__image">
                 <img src={set.image} alt={set.name} />
             </div>
