@@ -1,13 +1,23 @@
 .btn{
-    color: var(--color-white);
-    background-color: transparent;
     border: 1px solid var(--color-white);
     border-radius: var(--border-radius);
     padding: var(--space-xxxs) var(--space-m);
 
     &:hover{
         cursor: pointer;
-        background-color: var(--color-hover);
-        color: var(--color-black);
+    }
+    &__shop{
+        color: var(--color-white);
+        background-color: transparent;
+
+        &:hover{
+            background-color: var(--color-hover);
+            color: var(--color-black);
+        }
+    }
+
+    &__quantity{
+        background-color: transparent;
+        padding: var(--space-xxx);
     }
 }
