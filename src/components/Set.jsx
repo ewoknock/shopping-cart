@@ -17,7 +17,7 @@ function Set({ set }){
             <div className="set__image">
                 <img src={set.image} alt={set.name} />
             </div>
-            <p aria-label="set-name">{set.name}</p>
+            <h2 aria-label="set-name">{set.name}</h2>
             <p aria-label="price">${set.price}</p>
             <div className="set__actions">
                 <div className="set__qty">
