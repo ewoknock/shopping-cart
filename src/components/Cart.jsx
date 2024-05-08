@@ -12,7 +12,7 @@ const Cart = forwardRef(({children, toggleDialog}, dialogRef) => {
                 toggleDialog();
                 }
             }}>
-            <div className="cart-content">
+            <div className="cart__content">
                 <div className="cart__header">
                     <h2>Your Cart</h2>
                     <button className="btn btn__close" onClick={toggleDialog}>X</button>
