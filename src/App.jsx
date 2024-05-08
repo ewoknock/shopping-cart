@@ -1,16 +1,35 @@
-import { useState } from 'react'
+import { 
+  useState,
+  useRef
+} from 'react'
 import { Outlet } from "react-router-dom";
 import Header from './components/Header';
+import Cart from './components/Cart';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cart, setCart] = useState([])
+
+  const dialogRef = useRef(null);
+
+  const toggleDialog = () => {
+    if(!dialogRef.current){
+      return
+    }
+    dialogRef.current.hasAttribute("open") ? dialogRef.current.close() : dialogRef.current.showModal();
+  }
 
   return (
     <>
-      <Header />
+      <Header cart={cart} toggleDialog={toggleDialog} />
       <main>
-        <Outlet />
+        <Outlet context={[cart]} />
+        <Cart 
+          toggleDialog={toggleDialog}
+          ref={dialogRef}
+          >
+            {cart}
+          </Cart>
       </main>
     </>
   )

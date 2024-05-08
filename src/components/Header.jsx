@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function Header(){
+function Header({ toggleDialog }){
     return (
         <header className="header">
             <div className="header__container">
@@ -12,7 +12,7 @@ function Header(){
                     <Link to="/shop">Shop</Link>
                 </nav>
                 <div className="header__cart">
-                    <Link to="/cart">Cart</Link>
+                    <button className="btn btn__cart" onClick={toggleDialog} to="/cart">Cart</button>
                 </div>
             </div>
         </header>
