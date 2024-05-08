@@ -20,4 +20,10 @@
         background-color: transparent;
         padding: var(--space-xxx);
     }
+
+    &__cart{
+        background-color: transparent;
+        border: none;
+        color: var(--color-white);
+    }
 }

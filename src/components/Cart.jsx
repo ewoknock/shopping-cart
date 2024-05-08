@@ -24,7 +24,7 @@ const Cart = forwardRef(({children, toggleDialog}, dialogRef) => {
 })
 
 Cart.propTypes = {
-    cart: PropTypes.Object,
+    children: PropTypes.array,
     toggleDialog: PropTypes.func,
 };
 

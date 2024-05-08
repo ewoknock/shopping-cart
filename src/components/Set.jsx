@@ -37,7 +37,7 @@ function Set({ set }){
 
 
 Set.propTypes = {
-    set: PropTypes.Object,
+    set: PropTypes.object,
 };
 
 export default Set
