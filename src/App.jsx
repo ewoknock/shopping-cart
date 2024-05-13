@@ -28,6 +28,7 @@ function App() {
           toggleDialog={toggleDialog}
           ref={dialogRef}
           cart={cart}
+          updateCart={(newCart) => setCart(newCart)}
           >
             {cart}
           </Cart>

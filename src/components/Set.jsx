@@ -4,28 +4,27 @@ import PropTypes from 'prop-types';
 function Set({ set, cart, updateCart }){
     const [quantity, setQuantity] = useState(1)
 
-    const updateQuantity = (qty) => {
-        if (qty > 0){
-            setQuantity(qty)
-        } else{
-            qty = 1
-        }
-    }
-
     const addToCart = (set, quantity) => {
         const setInCart = cart.find((item) => item.set === set)
-        console.log(setInCart)
+        let newCart = []
         if(setInCart){
-            const newCart = cart.map((item) => {
+            newCart = cart.map((item) => {
                 if(item.set === set){
                     return { set: item.set, quantity: item.quantity + quantity }
                 }
                 return item
             })
-            updateCart(newCart)
         }else{
-            const newCart = [...cart, {set: set, quantity: quantity}];
-            updateCart(newCart)
+            newCart = [...cart, {set: set, quantity: quantity}];
+        }
+        updateCart(newCart)
+    }
+
+    const updateQuantity = (qty) => {
+        if (qty > 0){
+            setQuantity(qty)
+        } else{
+            qty = 1
         }
     }
 
