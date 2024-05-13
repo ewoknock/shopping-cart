@@ -7,9 +7,15 @@ const Cart = forwardRef(({cart, updateCart, toggleDialog}, dialogRef) => {
     }, 0)
     console.log(cart)
 
+    const removeFromCart = (cartItem) => {
+        const newCart = cart.filter((item) => item !== cartItem)
+        updateCart(newCart)
+    }
+
     const updateCartQuantity = (cartItem, quantity) => {
         if(cartItem.quantity + quantity < 1){
-            alert("Remove")
+            const confirmRemove = confirm('Remove Item?')
+            confirmRemove ? removeFromCart(cartItem) : ''
         }else{
             const newCart = cart.map((item) => {
                 if (item === cartItem){
@@ -20,6 +26,17 @@ const Cart = forwardRef(({cart, updateCart, toggleDialog}, dialogRef) => {
             updateCart(newCart)
         }
     }
+
+    const placeOrder = () => {
+        alert('Thank you for shopping with us!')   
+        resetCart()
+    }
+
+    const resetCart = () => {
+        updateCart([])
+        toggleDialog()
+    }
+
 
     return (
         <dialog 
@@ -57,7 +74,7 @@ const Cart = forwardRef(({cart, updateCart, toggleDialog}, dialogRef) => {
                                         className="btn btn__quantity"
                                         onClick={() => updateCartQuantity(item, 1)}>+</button>
                                     </div>
-                                    <button className="btn btn__cart-remove">Remove</button>
+                                    <button className="btn btn__cart-remove" onClick={() => removeFromCart(item)}>Remove</button>
                                 </div>
                             </div>
                         </div>
@@ -67,6 +84,7 @@ const Cart = forwardRef(({cart, updateCart, toggleDialog}, dialogRef) => {
                     <div>Subtotal:</div>
                     <div>${totalCoast}</div>
                 </div>
+                <button className="btn btn__place-order" onClick={placeOrder}>Place Order</button>
             </div>
         </dialog>
 
