@@ -23,10 +23,11 @@ function App() {
     <>
       <Header cart={cart} toggleDialog={toggleDialog} />
       <main>
-        <Outlet context={[cart]} />
+        <Outlet context={[cart, setCart]} />
         <Cart 
           toggleDialog={toggleDialog}
           ref={dialogRef}
+          cart={cart}
           >
             {cart}
           </Cart>

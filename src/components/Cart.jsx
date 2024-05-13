@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
-const Cart = forwardRef(({children, toggleDialog}, dialogRef) => {
+const Cart = forwardRef(({cart, toggleDialog}, dialogRef) => {
+    console.log(cart)
     return (
         <dialog 
             ref={dialogRef} 
@@ -17,6 +18,13 @@ const Cart = forwardRef(({children, toggleDialog}, dialogRef) => {
                     <h2>Your Cart</h2>
                     <button className="btn btn__close" onClick={toggleDialog}>X</button>
                 </div>
+                {cart.map((item) => {
+                    return(
+                        <div className="cart__item__cart" key={item.set.id}>
+                            <h3>{item.set.name}</h3>
+                        </div>
+                    )
+                })}
             </div>
         </dialog>
 
@@ -24,7 +32,7 @@ const Cart = forwardRef(({children, toggleDialog}, dialogRef) => {
 })
 
 Cart.propTypes = {
-    children: PropTypes.array,
+    cart: PropTypes.array,
     toggleDialog: PropTypes.func,
 };
 

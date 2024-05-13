@@ -27,7 +27,7 @@ describe("Set component", () => {
         <Set set={mockProduct} />
       </BrowserRouter>
     );
-    expect(screen.getByRole("paragraph", {name: 'set-name'}).textContent).toMatch(mockProduct.name);
+    expect(screen.getByRole("heading", {name: 'set-name'}).textContent).toMatch(mockProduct.name);
   });
 
   it("renders the product price", () => {
