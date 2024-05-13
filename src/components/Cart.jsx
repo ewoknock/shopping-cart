@@ -42,18 +42,23 @@ const Cart = forwardRef(({cart, updateCart, toggleDialog}, dialogRef) => {
                     return(
                         <div className="cart-item" key={item.set.id}>
                             <img src={item.set.image} />
-                            <div className="cart-item__header">
-                                <h3>{item.set.name}</h3>
-                                <h3>${totalPrice}</h3>
-                            </div>
-                            <div className="cart-item__quantity">
-                                <button 
-                                    className="btn btn__quantity"
-                                    onClick={() => updateCartQuantity(item, -1)}>-</button>
-                                    <span data-testid="qty-input">{item.quantity}</span>
-                                <button 
-                                className="btn btn__quantity"
-                                onClick={() => updateCartQuantity(item, 1)}>+</button>
+                            <div className="cart-item__content">
+                                <div className="cart-item__header">
+                                    <h3>{item.set.name}</h3>
+                                    <h3>${totalPrice}</h3>
+                                </div>
+                                <div className="cart-item__action">
+                                    <div className="cart-item__quantity">
+                                        <button 
+                                            className="btn btn__quantity"
+                                            onClick={() => updateCartQuantity(item, -1)}>-</button>
+                                            <span data-testid="qty-input">{item.quantity}</span>
+                                        <button 
+                                        className="btn btn__quantity"
+                                        onClick={() => updateCartQuantity(item, 1)}>+</button>
+                                    </div>
+                                    <button className="btn btn__cart-remove">Remove</button>
+                                </div>
                             </div>
                         </div>
                     )
