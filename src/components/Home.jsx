@@ -7,7 +7,7 @@ function Home(){
             <img src={Hero} />
             <div className="home__text">
                 <h1>Lego Star Wars Ultimate Collection</h1>
-                <Link to="/shop">
+                <Link to="/shopping-cart/shop">
                     <button className="btn btn__shop">Sets</button>
                 </Link>
             </div>

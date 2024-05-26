@@ -8,8 +8,8 @@ function Header({ toggleDialog }){
                     <Link to="/">STAR WARS</Link>
                 </div>
                 <nav className="header__nav">
-                    <Link to="/">Home</Link>
-                    <Link to="/shop">Shop</Link>
+                    <Link to="/shopping-cart/">Home</Link>
+                    <Link to="/shopping-cart/shop">Shop</Link>
                 </nav>
                 <div className="header__cart">
                     <button className="btn btn__cart" onClick={toggleDialog} to="/cart">Cart</button>
