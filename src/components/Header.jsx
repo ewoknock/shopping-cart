@@ -5,7 +5,7 @@ function Header({ toggleDialog }){
         <header className="header">
             <div className="header__container">
                 <div className="header__logo">
-                    <Link to="/">STAR WARS</Link>
+                    <Link to="/shopping-cart/">STAR WARS</Link>
                 </div>
                 <nav className="header__nav">
                     <Link to="/shopping-cart/">Home</Link>
