@@ -11,7 +11,7 @@ import ErrorPage from './components/ErrorPage.jsx'
 const Router = () => {
     const router = createBrowserRouter([
         {
-            path: "/",
+            path: "/shopping-cart/",
             element: <App />,
             errorElement: <ErrorPage />,
             children: [
