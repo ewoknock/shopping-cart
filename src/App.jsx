@@ -5,7 +5,6 @@ import {
 import { Outlet } from "react-router-dom";
 import Header from './components/Header';
 import Cart from './components/Cart';
-import './App.css'
 
 function App() {
   const [cart, setCart] = useState([])
